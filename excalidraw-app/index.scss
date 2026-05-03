@@ -128,3 +128,12 @@
     }
   }
 }
+/* Hide the main menu button (top left) */
+.excalidraw .App-menu__trigger {
+  display: none !important;
+}
+
+/* Hide help / footer links if needed */
+.excalidraw .layer-ui__wrapper__footer {
+  display: none !important;
+}
