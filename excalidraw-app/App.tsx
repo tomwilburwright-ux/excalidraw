@@ -916,6 +916,7 @@ const ExcalidrawWrapper = () => {
   theme={editorTheme}
   renderTopRightUI={() => null}
   renderTopLeftUI={() => null}
+  renderCustomUI={() => null}
 >
   <AppFooter onChange={() => excalidrawAPI?.refresh()} />
 </Excalidraw>
