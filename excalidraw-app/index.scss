@@ -137,3 +137,12 @@
 .excalidraw .layer-ui__wrapper__footer {
   display: none !important;
 }
+/* Hide the top-left menu button (hamburger) */
+.excalidraw .layer-ui__wrapper__top-left {
+  display: none !important;
+}
+
+/* Optional: tighten layout after removing it */
+.excalidraw .layer-ui__wrapper {
+  padding-left: 0 !important;
+}
