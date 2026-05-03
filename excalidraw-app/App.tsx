@@ -909,14 +909,24 @@ const ExcalidrawWrapper = () => {
       })}
     >
       <Excalidraw
+        UIOptions={{
+  canvasActions: {
+    loadScene: false,
+    saveToActiveFile: false,
+    export: false,
+    toggleTheme: false,
+  },
+}}
+initialData={{
+  appState: {
+    currentItemStrokeColor: "#000000",
+    currentItemStrokeWidth: 2,
+  },
+}}
         onChange={onChange}
         onExport={onExport}
-        initialData={initialStatePromiseRef.current.promise}
         isCollaborating={isCollaborating}
         onPointerUpdate={collabAPI?.onPointerUpdate}
-        UIOptions={{
-          canvasActions: {
-            toggleTheme: true,
             export: {
               onExportToBackend,
               renderCustomUI: excalidrawAPI
