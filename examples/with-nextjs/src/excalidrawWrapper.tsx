@@ -14,7 +14,16 @@ const ExcalidrawWrapper: React.FC = () => {
         useCustom={(api: any, args?: any[]) => {}}
         excalidrawLib={excalidrawLib}
       >
-        <Excalidraw />
+<Excalidraw
+  UIOptions={{
+    canvasActions: {
+      loadScene: false,
+      saveToActiveFile: false,
+      export: false,
+      toggleTheme: false,
+    },
+  }}
+/>
       </App>
     </>
   );
