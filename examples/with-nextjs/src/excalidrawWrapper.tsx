@@ -1,12 +1,8 @@
 "use client";
-import * as excalidrawLib from "@excalidraw/excalidraw";
-import { Excalidraw } from "@excalidraw/excalidraw";
 
+import { Excalidraw } from "@excalidraw/excalidraw";
 import "@excalidraw/excalidraw/index.css";
 
-const ExcalidrawWrapper: React.FC = () => {
-  return (
-    <>
 const ExcalidrawWrapper: React.FC = () => {
   return (
     <Excalidraw
@@ -20,9 +16,6 @@ const ExcalidrawWrapper: React.FC = () => {
       }}
       renderTopRightUI={() => null}
     />
-  );
-};
-    </>
   );
 };
 
