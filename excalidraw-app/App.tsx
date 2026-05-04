@@ -890,35 +890,16 @@ const ExcalidrawWrapper = () => {
       })}
     >
 <Excalidraw
-  UIOptions={{
-    canvasActions: {
-      loadScene: false,
-      saveToActiveFile: false,
-      export: false,
-      toggleTheme: false,
-    },
-  }}
-  initialData={{
-    appState: {
-      currentItemStrokeColor: "#000000",
-      currentItemStrokeWidth: 2,
-    },
-  }}
   onChange={onChange}
   onExport={onExport}
   isCollaborating={isCollaborating}
   onPointerUpdate={collabAPI?.onPointerUpdate}
   langCode={langCode}
-  renderCustomStats={renderCustomStats}
   detectScroll={false}
   handleKeyboardGlobally={true}
   autoFocus={true}
   theme={editorTheme}
-  renderTopRightUI={() => null}
-  renderTopLeftUI={() => null}
-  renderCustomUI={() => null}
->
-  <AppFooter onChange={() => excalidrawAPI?.refresh()} />
+/>
 </Excalidraw>
     </div>
   );
