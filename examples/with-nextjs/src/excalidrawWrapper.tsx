@@ -4,27 +4,24 @@ import { Excalidraw } from "@excalidraw/excalidraw";
 
 import "@excalidraw/excalidraw/index.css";
 
-import App from "../../with-script-in-browser/components/ExampleApp";
-
 const ExcalidrawWrapper: React.FC = () => {
   return (
     <>
-      <App
-        appTitle={"Excalidraw with Nextjs Example"}
-        useCustom={(api: any, args?: any[]) => {}}
-        excalidrawLib={excalidrawLib}
-      >
-<Excalidraw
-  UIOptions={{
-    canvasActions: {
-      loadScene: false,
-      saveToActiveFile: false,
-      export: false,
-      toggleTheme: false,
-    },
-  }}
-/>
-      </App>
+const ExcalidrawWrapper: React.FC = () => {
+  return (
+    <Excalidraw
+      UIOptions={{
+        canvasActions: {
+          loadScene: false,
+          saveToActiveFile: false,
+          export: false,
+          toggleTheme: false,
+        },
+      }}
+      renderTopRightUI={() => null}
+    />
+  );
+};
     </>
   );
 };
