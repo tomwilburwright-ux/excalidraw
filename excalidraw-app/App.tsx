@@ -885,11 +885,7 @@ const ExcalidrawWrapper = () => {
   return (
     <div
       style={{ height: "100%" }}
-      className={clsx("excalidraw-app", {
-        "is-collaborating": isCollaborating,
-      })}
-    >
-<Excalidraw
+     <Excalidraw
   onChange={onChange}
   onExport={onExport}
   isCollaborating={isCollaborating}
@@ -900,7 +896,6 @@ const ExcalidrawWrapper = () => {
   autoFocus={true}
   theme={editorTheme}
 />
-</Excalidraw>
     </div>
   );
 };
